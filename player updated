@@ -1,0 +1,60 @@
+   public Player() {
+        public location = "Beach";
+        public item1 = null;
+        public item2 = null;
+        public item3 = null;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void move(String newLocation) {
+        location = newLocation;
+    }
+
+    public void pickUp(Item item) {
+
+        if (item1 == null) {
+            item1 = item;
+        }
+        else if (item2 == null) {
+            item2 = item;
+        }
+        else if (item3 == null) {
+            item3 = item;
+        }
+        else {
+            System.out.println("Your inventory is full.");
+        }
+    }
+
+    public void dropItem1() {
+        item1 = null;
+    }
+
+    public void dropItem2() {
+        item2 = null;
+    }
+
+    public void dropItem3() {
+        item3 = null;
+    }
+
+    public void showInventory() {
+
+        System.out.println("Inventory:");
+
+        if (item1 != null) {
+            System.out.println(item1.getName());
+        }
+
+        if (item2 != null) {
+            System.out.println(item2.getName());
+        }
+
+        if (item3 != null) {
+            System.out.println(item3.getName());
+        }
+    }
+}

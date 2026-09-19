@@ -1,0 +1,107 @@
+import java.util.ArrayList;
+
+public class Player {
+	 String location;
+	 public ArrayList<String> inventory;
+	 
+	 
+	 
+	 public Player() {
+		 location= "Beach";
+		 
+		 inventory = new ArrayList<String>();
+		 
+		 }
+	 
+	 public String getLocation() {
+		 return location;
+	 
+	 }
+	 
+	 
+	 
+	
+	
+	
+	
+	 
+	 
+	 
+	 // Used AI to make this code for me pasted below
+	 public void pickUp(String item) {
+
+	        inventory.add(item);
+
+	        System.out.println("You picked up: " + item);
+	    }
+
+
+	    // Drop an item
+	    public void drop(String item) {
+
+	        if (inventory.contains(item)) {
+
+	            inventory.remove(item);
+
+	            System.out.println("You dropped: " + item);
+	        }
+	        else {
+
+	            System.out.println("You don't have that item.");
+	        }
+	    }
+
+
+	    // Check if player has an item
+	    public boolean hasItem(String item) {
+
+	        return inventory.contains(item);
+	    }
+
+
+	    // Look at an item
+	    public void lookAt(String item) {
+
+	        if (inventory.contains(item)) {
+
+	            System.out.println("You look at the " + item);
+	        }
+	        else {
+
+	            System.out.println("You don't have that item.");
+	        }
+	    }
+
+
+	    // Use an item
+	    public void use(String item) {
+
+	        if (inventory.contains(item)) {
+
+	            System.out.println("You used the " + item);
+	        }
+	        else {
+
+	            System.out.println("You don't have that item.");
+	        }
+	    }
+
+
+	    // Display inventory
+	    public void showInventory() {
+
+	        System.out.println("Inventory:");
+
+	        if (inventory.isEmpty()) {
+
+	            System.out.println("Your inventory is empty.");
+	        }
+	        else {
+
+	            for (String item : inventory) {
+
+	                System.out.println("- " + item);
+	            }
+	        }
+	    }
+	}

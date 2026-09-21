@@ -13,7 +13,9 @@
         location = newLocation;
     }
 
-    public void pickUp(Item item) {
+   
+// used some AI help for the inventory system like showing inventory and picking up and dropping items in inventory not my own work 
+      public void pickUp(Item item) {
 
         if (item1 == null) {
             item1 = item;
